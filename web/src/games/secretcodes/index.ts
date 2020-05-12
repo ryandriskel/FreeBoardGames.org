@@ -1,4 +1,4 @@
-const Thumbnail = require('./media/thumbnail.png');
+const Thumbnail = require('./media/thumbnail.jpg');
 import { IGameDef } from '../index';
 import { GameMode } from '../../components/App/Game/GameModePicker';
 import instructions from './instructions.md';
