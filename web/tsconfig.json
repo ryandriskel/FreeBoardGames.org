@@ -19,7 +19,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "types": [
-      "expect-puppeteer",
       "cypress",
       "jest"
     ],
