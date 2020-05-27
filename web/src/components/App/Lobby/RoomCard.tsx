@@ -11,9 +11,15 @@ const theme = createMuiTheme({
   },
 });
 
+export interface GameDataProps {
+  name: string;
+  imageURL: {
+    src: string;
+  };
+}
+
 interface Props {
-  gameName: string;
-  gameImageURL: string;
+  gameData: GameDataProps;
   players: string[];
   capacity: number;
 }
@@ -26,14 +32,13 @@ export default class RoomCard extends React.Component<Props, State> {
   state: State = {};
 
   render() {
-    const image = this.props.gameImageURL;
+    const gameData = this.props.gameData;
     const mainDivStyle: React.CSSProperties = {
       position: 'relative',
-      height: '188px', // 250px
-      width: '380px', // 500px
+      height: '188px',
+      width: '380px',
       backgroundPosition: 'left center',
-      backgroundColor: image[0],
-      backgroundImage: `url(${image})`,
+      backgroundImage: `url(${gameData.imageURL})`,
       backgroundSize: 'cover',
     };
     const baseBadgeStyle: React.CSSProperties = {
@@ -47,7 +52,7 @@ export default class RoomCard extends React.Component<Props, State> {
     };
     const gameNameHeading = (
       <Typography gutterBottom={false} variant="h4" component="h1" style={{ fontWeight: 300 }} data-testid={'gamename'}>
-        {this.props.gameName}
+        {gameData.name}
       </Typography>
     );
     const numPlayersAndCapacity = (
