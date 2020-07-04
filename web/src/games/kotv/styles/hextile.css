@@ -1,3 +1,7 @@
-.hextile {
-    background-color: teal;
+.HexTile {
+    fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;
+}
+
+.HexTileBackground {
+    fill:rgb(185,185,185);
 }

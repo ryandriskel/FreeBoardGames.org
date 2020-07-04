@@ -9,7 +9,7 @@ export const checkersGameDef: IGameDef = {
   imageURL: Thumbnail,
   modes: [{ mode: GameMode.OnlineFriend }, { mode: GameMode.LocalFriend }],
   minPlayers: 2,
-  maxPlayers: 4,
+  maxPlayers: 6,
   description: 'a Heavy Strategy Game',
   descriptionTag: `Play Knights of the Vale locally
   or online against friends!`,
