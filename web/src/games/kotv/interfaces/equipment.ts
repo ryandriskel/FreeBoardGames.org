@@ -1,7 +1,7 @@
 import ICost from './development';
-import { ResourceType } from './hextile';
+import { ResourceType } from './resource';
 
-export const enum Bonus {
+export enum Bonus {
     HEALTH = "health",
     ARMOR = "armor",
     MOVERANGE = "move range",

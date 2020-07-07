@@ -1,5 +1,9 @@
 .HexTile {
-    fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;
+    transform: translate(-44px, 0px);
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    stroke-linejoin:round;
+    stroke-miterlimit:2;
 }
 
 .HexTileBackground {

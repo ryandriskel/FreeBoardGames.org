@@ -1,5 +1,5 @@
 import { TerrainType } from './hextile'
-import { ResourceType } from './hextile'
+import { ResourceType } from './resource'
 
 export default interface IResource {
     resource: string;

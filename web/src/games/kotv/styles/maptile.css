@@ -1,0 +1,5 @@
+.MapTile {
+    width:612px;
+    height:612px;
+    transform-origin: 50% 50%;
+}
