@@ -1,5 +1,5 @@
-import IBonus, { Bonus } from './equipment';
-import IUnit from './unit';
+import IBonus, { BonusType } from './equipment';
+import { IUnit } from './unit';
 
 export enum TerrainType {
     CANYON = "canyon",
@@ -53,13 +53,13 @@ canyons: 16
 mountains: 21
 */
 const DEFAULT_TERRAIN_BONUS = {};
-DEFAULT_TERRAIN_BONUS[TerrainType.WETLANDS] = [{kind: Bonus.MPOW, value: -1},{kind: Bonus.RPOW, value: -1}];
+DEFAULT_TERRAIN_BONUS[TerrainType.WETLANDS] = [{kind: BonusType.MPOW, value: -1},{kind: BonusType.RPOW, value: -1}];
 DEFAULT_TERRAIN_BONUS[TerrainType.PLAINS] = [];
-DEFAULT_TERRAIN_BONUS[TerrainType.CANYON] = [{kind: Bonus.RPOW, value: 1}];
+DEFAULT_TERRAIN_BONUS[TerrainType.CANYON] = [{kind: BonusType.RPOW, value: 1}];
 DEFAULT_TERRAIN_BONUS[TerrainType.FOREST] = [];
-DEFAULT_TERRAIN_BONUS[TerrainType.GRASSLAND] = [{kind: Bonus.MPOW, value: 1}];
-DEFAULT_TERRAIN_BONUS[TerrainType.HILLS] = [{kind: Bonus.RPOW, value: 1}];
-DEFAULT_TERRAIN_BONUS[TerrainType.MOUNTAINS] = [{kind: Bonus.MPOW, value: 1},{kind: Bonus.RPOW, value: 1}];
+DEFAULT_TERRAIN_BONUS[TerrainType.GRASSLAND] = [{kind: BonusType.MPOW, value: 1}];
+DEFAULT_TERRAIN_BONUS[TerrainType.HILLS] = [{kind: BonusType.RPOW, value: 1}];
+DEFAULT_TERRAIN_BONUS[TerrainType.MOUNTAINS] = [{kind: BonusType.MPOW, value: 1},{kind: BonusType.RPOW, value: 1}];
 
 export const NullTile = { id: null, minPlayers: 0, ring: 0, exits: [], terrain: null, native: null, castle: null, };
 

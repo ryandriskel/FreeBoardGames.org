@@ -1,0 +1,69 @@
+.resourceCost {
+    position: relative;
+    width: 100px;
+    height: 66px;
+    line-height: 66px;
+}
+
+.resourceCostAmount {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.resourceIconContainer {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+.resource {
+    width: 66px;
+    height: 66px;
+    background-repeat: no-repeat;
+    background-size: 66px 66px;
+}
+
+.resource.gold {
+    background-image: url(../media/resources/resource_tokens_01.png);
+}
+
+.resource.food {
+    background-image: url(../media/resources/resource_tokens_02.png);
+}
+
+.resource.cloth {
+    background-image: url(../media/resources/resource_tokens_03.png);
+}
+
+.resource.beer {
+    background-image: url(../media/resources/resource_tokens_04.png);
+}
+
+.resource.furs {
+    background-image: url(../media/resources/resource_tokens_05.png);
+}
+
+.resource.clay {
+    background-image: url(../media/resources/resource_tokens_06.png);
+}
+
+.resource.wood {
+    background-image: url(../media/resources/resource_tokens_07.png);
+}
+
+.resource.bronze {
+    background-image: url(../media/resources/resource_tokens_08.png);
+}
+
+.resource.iron {
+    background-image: url(../media/resources/resource_tokens_09.png);
+}
+
+.resource.stone {
+    background-image: url(../media/resources/resource_tokens_10.png);
+}

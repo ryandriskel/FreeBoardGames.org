@@ -1,0 +1,34 @@
+.unitMatContainer {
+    position: relative;
+    border: 1px solid black;
+    width: 450px;
+    height: 800px;
+    background-color: rgb(247, 233, 211);
+}
+
+.unitMatHeader {
+    background-color: rgb(242, 242, 242);
+    height: 80px;
+    line-height: 80px;
+    padding: 0px 0px 0px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.unitMatEquipmentSlot {
+    height: 178px;
+    border-top: 1px solid black;    
+    border-bottom: 1px solid black;
+    text-align: center;
+    line-height: 178px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgb(161, 161, 161);
+}
+
+.unitDefaultCost {
+    float: right;
+    margin-top: 6px;
+}

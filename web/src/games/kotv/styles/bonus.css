@@ -1,0 +1,73 @@
+.bonus {
+    position: relative;
+    width: 120px;
+    height: 140px;
+}
+
+.bonusAmount {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 120px;
+    height: 140px;
+    color: yellow;
+    text-shadow: 0px 0px 2px black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 140px;
+}
+
+.bonusIconContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.bonusIcon {
+    width: 120px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: 140px 140px;
+    background-position: -10px 0px;
+}
+
+.bonusIcon.health {
+    background-image: url(../media/bonus/health.png);
+}
+
+.bonusIcon.mpen {
+    background-image: url(../media/bonus/mpen.png);
+}
+
+.bonusIcon.mpow {
+    background-image: url(../media/bonus/mpow.png);
+}
+
+.bonusIcon.rpen {
+    background-image: url(../media/bonus/rpen.png);
+}
+
+.bonusIcon.rpow {
+    background-image: url(../media/bonus/rpow.png);
+}
+
+.bonusIcon.armor {
+    background-image: url(../media/bonus/armor.png);
+}
+
+.bonusIcon.target {
+    background-image: url(../media/bonus/range.png);
+}
+
+.bonusIcon.strength {
+    background-image: url(../media/bonus/strength.png);
+}
+
+.bonusIcon.moverange {
+    background-image: url(../media/bonus/strength.png);
+}
+
+.bonusIcon.moveaction {
+    background-image: url(../media/bonus/strength.png);
+}

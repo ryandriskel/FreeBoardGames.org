@@ -1,12 +1,12 @@
 import { TerrainType } from './hextile'
 import { ResourceType } from './resource'
 
-export default interface IResource {
+export interface IResource {
     resource: string;
     amount: number;
 }
 
-export default interface IDevelopment {
+export interface IDevelopment {
     name: string;
     terrain: string[];
     cost: IResource[];

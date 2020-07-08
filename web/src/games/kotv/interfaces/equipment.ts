@@ -1,35 +1,35 @@
-import ICost from './development';
 import { ResourceType } from './resource';
+import { IResource } from './development';
 
-export enum Bonus {
+export enum BonusType {
     HEALTH = "health",
     ARMOR = "armor",
-    MOVERANGE = "move range",
-    MOVEACTION = "move actions",
-    MPEN = "melee penetration",
-    RPEN = "ranged penetration",
-    MPOW = "melee power",
-    RPOW = "ranged power",
+    MOVERANGE = "moverange",
+    MOVEACTION = "moveaction",
+    MPEN = "mpen",
+    RPEN = "rpen",
+    MPOW = "mpow",
+    RPOW = "rpow",
     TARGET = "target",
 }
 
-export default interface IBonus {
+export interface IBonus {
     kind: string;
-    value: number;
+    amount: number;
 }
 
-export default interface IEquipment {
+export interface IEquipment {
     name: string;
     bonuses: IBonus[];
-    upkeep: ICost[];
+    upkeep: IResource[];
 }
 
 const health2 = {
     name: "Health+2",
     bonuses: [
         {
-            kind: Bonus.HEALTH,
-            value: 2
+            kind: BonusType.HEALTH,
+            amount: 2
         }
     ],
     upkeep: [{
@@ -42,8 +42,8 @@ const health4 = {
     name: "Health+4",
     bonuses: [
         {
-            kind: Bonus.HEALTH,
-            value: 4
+            kind: BonusType.HEALTH,
+            amount: 4
         }
     ],
     upkeep: [{
@@ -59,8 +59,8 @@ const health8 = {
     name: "Health+8",
     bonuses: [
         {
-            kind: Bonus.HEALTH,
-            value: 8
+            kind: BonusType.HEALTH,
+            amount: 8
         }
     ],
     upkeep: [{
@@ -76,8 +76,8 @@ const armor7 = {
     name: "7 Armor",
     bonuses: [
         {
-            kind: Bonus.ARMOR,
-            value: 7
+            kind: BonusType.ARMOR,
+            amount: 7
         }
     ],
     upkeep: [{
@@ -90,8 +90,8 @@ const armor8 = {
     name: "8 Armor",
     bonuses: [
         {
-            kind: Bonus.ARMOR,
-            value: 8
+            kind: BonusType.ARMOR,
+            amount: 8
         }
     ],
     upkeep: [{
@@ -107,8 +107,8 @@ const armor9 = {
     name: "9 Armor",
     bonuses: [
         {
-            kind: Bonus.ARMOR,
-            value: 9
+            kind: BonusType.ARMOR,
+            amount: 9
         }
     ],
     upkeep: [{
@@ -124,8 +124,8 @@ const move1 = {
     name: "Movement I",
     bonuses: [
         {
-            kind: Bonus.MOVERANGE,
-            value: 2
+            kind: BonusType.MOVERANGE,
+            amount: 2
         },
     ],
     upkeep: [{
@@ -138,12 +138,12 @@ const move2 = {
     name: "Movement II",
     bonuses: [
         {
-            kind: Bonus.MOVERANGE,
-            value: 3
+            kind: BonusType.MOVERANGE,
+            amount: 3
         },
         {
-            kind: Bonus.MOVEACTION,
-            value: 1
+            kind: BonusType.MOVEACTION,
+            amount: 1
         }
     ],
     upkeep: [{
@@ -159,12 +159,12 @@ const move3 = {
     name: "Movement III",
     bonuses: [
         {
-            kind: Bonus.MOVERANGE,
-            value: 4
+            kind: BonusType.MOVERANGE,
+            amount: 4
         },
         {
-            kind: Bonus.MOVEACTION,
-            value: 1
+            kind: BonusType.MOVEACTION,
+            amount: 1
         }
     ],
     upkeep: [{
@@ -180,8 +180,8 @@ const mpen1 = {
     name: "Melee Pen. I",
     bonuses: [
         {
-            kind: Bonus.MPEN,
-            value: 1.5
+            kind: BonusType.MPEN,
+            amount: 1.5
         }
     ],
     upkeep: [{
@@ -194,8 +194,8 @@ const mpen2 = {
     name: "Melee Pen. II",
     bonuses: [
         {
-            kind: Bonus.MPEN,
-            value: 2
+            kind: BonusType.MPEN,
+            amount: 2
         }
     ],
     upkeep: [{
@@ -208,8 +208,8 @@ const mpen3 = {
     name: "Melee Pen. III",
     bonuses: [
         {
-            kind: Bonus.MPEN,
-            value: 3
+            kind: BonusType.MPEN,
+            amount: 3
         }
     ],
     upkeep: [{
@@ -222,8 +222,8 @@ const mpow1 = {
     name: "Melee Power I",
     bonuses: [
         {
-            kind: Bonus.MPOW,
-            value: -1
+            kind: BonusType.MPOW,
+            amount: 1.5
         }
     ],
     upkeep: [{
@@ -236,8 +236,8 @@ const mpow2 = {
     name: "Melee Power II",
     bonuses: [
         {
-            kind: Bonus.MPOW,
-            value: -2
+            kind: BonusType.MPOW,
+            amount: 2
         }
     ],
     upkeep: [{
@@ -253,8 +253,8 @@ const mpow3 = {
     name: "Melee Power III",
     bonuses: [
         {
-            kind: Bonus.MPOW,
-            value: -3
+            kind: BonusType.MPOW,
+            amount: 3
         }
     ],
     upkeep: [{
@@ -270,8 +270,8 @@ const rpen1 = {
     name: "Ranged Pen. I",
     bonuses: [
         {
-            kind: Bonus.RPEN,
-            value: 1.5
+            kind: BonusType.RPEN,
+            amount: 1.5
         }
     ],
     upkeep: [{
@@ -284,8 +284,8 @@ const rpen2 = {
     name: "Ranged Pen. II",
     bonuses: [
         {
-            kind: Bonus.RPEN,
-            value: 2
+            kind: BonusType.RPEN,
+            amount: 2
         }
     ],
     upkeep: [{
@@ -298,8 +298,8 @@ const rpen3 = {
     name: "Ranged Pen. III",
     bonuses: [
         {
-            kind: Bonus.RPEN,
-            value: 3
+            kind: BonusType.RPEN,
+            amount: 3
         }
     ],
     upkeep: [{
@@ -312,8 +312,8 @@ const rpow1 = {
     name: "Ranged Power I",
     bonuses: [
         {
-            kind: Bonus.MPOW,
-            value: -1
+            kind: BonusType.MPOW,
+            amount: 1.5
         }
     ],
     upkeep: [{
@@ -326,12 +326,12 @@ const rpow2 = {
     name: "Ranged Power II",
     bonuses: [
         {
-            kind: Bonus.MPOW,
-            value: -2
+            kind: BonusType.MPOW,
+            amount: 2
         },
         {
-            kind: Bonus.TARGET,
-            value: 2
+            kind: BonusType.TARGET,
+            amount: 2
         }
     ],
     upkeep: [{
@@ -348,12 +348,12 @@ const rpow3 = {
     name: "Ranged Power III",
     bonuses: [
         {
-            kind: Bonus.MPOW,
-            value: -3
+            kind: BonusType.MPOW,
+            amount: 3
         },
         {
-            kind: Bonus.TARGET,
-            value: 2
+            kind: BonusType.TARGET,
+            amount: 2
         }
     ],
     upkeep: [{

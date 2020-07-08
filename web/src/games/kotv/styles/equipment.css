@@ -1,0 +1,46 @@
+.equipmentContainer {
+    position: relative;
+    width: 450px;
+    height: 178px;
+    background-color: rgb(235, 217, 188);
+    border-top: 1px solid rgb(0,0,0);
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+.equipmentName {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 178px;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    transform: rotate(90deg) translate(0px, -40px);
+    transform-origin: 0% 0%;
+    text-align: center;
+}
+
+.equipmentBonuses {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+
+.equipmentBonusContainer {
+    float: left;
+}
+
+.equipmentCosts {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    height: 138px;
+    width: 102px;
+    padding: 0px 0px 0px 10px;
+    background-color: rgb(241, 228, 208);
+    border: 1px solid rgb(128,128,128);
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
