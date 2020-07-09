@@ -9,6 +9,7 @@ export enum UnitType {
 
 export interface IUnit {
     unittype: string;
+    experience?: number;
     owner?: number;
     equipment?: IEquipment[];
     bonuses?: IBonus[];
