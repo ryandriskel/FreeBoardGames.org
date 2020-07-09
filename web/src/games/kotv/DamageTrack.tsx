@@ -25,70 +25,63 @@ export class DamageTrack extends React.Component<IDamageTrackProps, IDamageTrack
     }
 
     renderLevelStrength(){
+        const icons:any[] = [];
+        let isDamaged:boolean = false;
+
+        for (var i:number = 0; i < this.props.unit.ctxLevel; i++){
+            isDamaged = (this.props.unit.damage >= (i+1) + this.props.unit.ctxHealth + this.props.unit.coreStrength);
+
+            icons.push(
+                <div key={i} className={[css.damageTrackIcon, isDamaged?css.damaged:null].join(' ')}>
+                    <BonusIcon name={BonusType.STRENGTH} />
+                </div>
+            );
+        }
+
         return (
             <div className={css.damageTrackLevelStrength}>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
+                {icons}
             </div>
         )
     }
 
     renderCoreStrength(){
+        const icons:any[] = [];
+        let isDamaged:boolean = false;
+
+        for (var i:number = this.props.unit.coreStrength; i > 0; i--){
+            isDamaged = (this.props.unit.damage >= i + this.props.unit.ctxHealth);
+
+            icons.push(
+                <div key={i} className={[css.damageTrackIcon, isDamaged?css.damaged:null].join(' ')}>
+                    <BonusIcon name={BonusType.STRENGTH} />
+                </div>
+            );
+        }
+
         return (
             <div className={css.damageTrackCoreStrength}>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.STRENGTH} />
-                </div>
+                {icons}
             </div>
         )
     }
 
     renderEquipmentHealth(){
+        const icons:any[] = [];
+        let isDamaged:boolean = false;
+
+        for (var i:number = this.props.unit.ctxHealth; i > 0; i--){
+            isDamaged = (this.props.unit.damage >= i);
+            icons.push(
+                <div key={i} className={[css.damageTrackIcon, isDamaged?css.damaged:null].join(' ')}>
+                    <BonusIcon name={BonusType.HEALTH} />
+                </div>
+            );
+        }
+
         return (
             <div className={css.damageTrackEquipmentHealth}>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
-                <div className={css.damageTrackIcon}>
-                    <BonusIcon name={BonusType.HEALTH} />
-                </div>
+                {icons}
             </div>
         )
     }

@@ -39,6 +39,15 @@
     margin-top: -20px;
 }
 
+.damageTrackCoreStrength .damageTrackIcon {
+    float: left;
+}
+
 .damageTrackEquipmentHealth .damageTrackIcon {
+    float: left;
     width: 12.5%;
+}
+
+.damaged {
+    opacity: 0.1;
 }

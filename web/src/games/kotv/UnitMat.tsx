@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 import css from './styles/unit.css';
-import { IUnit } from './interfaces/unit';
+import { IUnitDesign } from './interfaces/unit';
 import { ResourceCost } from './ResourceCost';
 import { EquipmentTile } from './EquipmentTile';
 
 export interface IUnitMatProps {
-    unit: IUnit;
+    unitDesign: IUnitDesign;
 }
 
 interface IUnitMatState {
@@ -20,9 +20,9 @@ export class UnitMat extends React.Component<IUnitMatProps, IUnitMatState> {
         return (
             <div className={css.unitMatContainer}>
                 <div className={css.unitMatHeader}>
-                    {this.props.unit.unittype}
+                    {this.props.unitDesign.unittype}
                     <div className={css.unitDefaultCost}>
-                        <ResourceCost cost={this.props.unit.upkeep[0]} />
+                        <ResourceCost cost={this.props.unitDesign.upkeep[0]} />
                     </div>
                 </div>
                 <div className={css.unitMatEquipmentContainer}>
@@ -36,11 +36,11 @@ export class UnitMat extends React.Component<IUnitMatProps, IUnitMatState> {
     }
 
     renderEquipmentSlot(index:number){
-        if (!('equipment' in this.props.unit)){
+        if (!('equipment' in this.props.unitDesign)){
             return null;
         }
         
-        if (this.props.unit.equipment[index] === undefined){
+        if (this.props.unitDesign.equipment[index] === undefined){
             return (
                 <div key={index} className={css.unitMatEquipmentSlot}>
                     Item {index+1}
@@ -49,7 +49,7 @@ export class UnitMat extends React.Component<IUnitMatProps, IUnitMatState> {
         }
 
         return (
-            <EquipmentTile key={index} equipment={this.props.unit.equipment[index]} />
+            <EquipmentTile key={index} equipment={this.props.unitDesign.equipment[index]} />
         );
     }
 }

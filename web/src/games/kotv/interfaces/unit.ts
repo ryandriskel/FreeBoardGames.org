@@ -8,11 +8,20 @@ export enum UnitType {
 }
 
 export interface IUnit {
-    unittype: string;
-    experience?: number;
+    design: IUnitDesign;
+    experience: number;
+    upkeep: IResource[];
+    coreStrength: number;
+    ctxLevel: number;
+    ctxHealth: number;
+    damage: number;
     owner?: number;
-    equipment?: IEquipment[];
     bonuses?: IBonus[];
+}
+
+export interface IUnitDesign {
+    unittype: string;
+    equipment: IEquipment[];
     upkeep: IResource[];
 }
 
