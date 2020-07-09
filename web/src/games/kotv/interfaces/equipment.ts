@@ -3,6 +3,7 @@ import { IResource } from './development';
 
 export enum BonusType {
     HEALTH = "health",
+    STRENGTH = "strength",
     ARMOR = "armor",
     MOVERANGE = "moverange",
     MOVEACTION = "moveaction",

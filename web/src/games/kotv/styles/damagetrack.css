@@ -1,0 +1,44 @@
+.damageTrackContainer {
+    position: relative;
+    border: 1px solid grey;
+    height: 98px;
+    width: 1800px;
+}
+
+.damageTrackLevelStrength {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(226, 226, 226);
+}
+
+.damageTrackCoreStrength {
+    position: absolute;
+    top: 0px;
+    left: 25%;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(189, 189, 189);
+}
+
+.damageTrackEquipmentHealth {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 220, 220);
+}
+
+.damageTrackIcon {
+    float: right;
+    width: 25%;
+    height: 100%;
+    margin-top: -20px;
+}
+
+.damageTrackEquipmentHealth .damageTrackIcon {
+    width: 12.5%;
+}

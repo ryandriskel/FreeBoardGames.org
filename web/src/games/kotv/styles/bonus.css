@@ -36,6 +36,10 @@
     background-image: url(../media/bonus/health.png);
 }
 
+.bonusIcon.strength {
+    background-image: url(../media/bonus/strength.png);
+}
+
 .bonusIcon.mpen {
     background-image: url(../media/bonus/mpen.png);
 }
