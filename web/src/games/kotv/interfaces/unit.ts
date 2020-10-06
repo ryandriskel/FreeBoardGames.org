@@ -8,9 +8,8 @@ export enum UnitType {
 }
 
 export interface IUnit {
-    design: IUnitDesign;
+    unittype: string;
     experience: number;
-    upkeep: IResource[];
     coreStrength: number;
     ctxLevel: number;
     ctxHealth: number;
@@ -35,3 +34,12 @@ DEFAULT_UNITTYPE_EQUIPMENT[UnitType.SWORDSMAN] = [
 DEFAULT_UNITTYPE_EQUIPMENT[UnitType.CAVALRY] = [
     { ...DEFAULT_EQUIPMENT[6].kind }
 ];
+
+export const NullUnit = {
+    unittype: null,
+    experience: 0,
+    coreStrength: 0,
+    ctxLevel: 0,
+    ctxHealth: 0,
+    damage: 0,
+}

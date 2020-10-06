@@ -1,0 +1,26 @@
+.playerMat {
+    background-image: url(../media/playerboard.png);
+    background-size: 100vw calc(100vw * 0.66);
+    background-repeat: no-repeat;
+    background-color: grey;
+}
+
+.playerMatTopRow {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.playerMatUnitDesigns {
+    transform: scale(calc(100vw / 3600));
+}
+
+.playerMatDamageTracks {
+    transform: scale(0.2);
+}
+
+.playerMatMiddleRow {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.playerMatExperienceTrack {
+    transform: scale(0.2);
+}
